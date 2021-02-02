@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="content-area">
+            <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content">
+            <h1>Cruise Queen</h1>
+            <p>Part of the appeal of cruising is that there's truly something for everyone. Ships come in an array of sizes, some loaded with so many activities, you couldn't get to them all in a week.
+            Families will find plenty of options and activities onboard big ships, which have transformed cruising, making the vessels as exciting as the destinations to which they sail.</p>
+        </div>
+
+
+        <div class="booking-form">
+            <h3>Book Ocean Time</h3>
+            <div class="input-group">
+                <label for="">Travelling From</label>
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Travelling To</label>
+                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label id="firstClass-total" for="">First Class ($150)</label>
+                    <input id="firstClass-ticket" class="inp-style inp-width" type="number" name="" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <br>
+                    <button onclick="ticketCount('firstClass', true);" id="case-increase" class="increase-btn-color">+</button>
+                    <button onclick="ticketCount('firstClass', false);" id="case-decrease" class="decrease-btn-color">-</button>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label id="economy-total" for="">Economy ($100)</label>
+                    <input id="economy-ticket" class="inp-style inp-width" type="number" name="" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                   
+                    <button onclick="ticketCount('economy', true);" id="case-increase" class="increase-btn-color">+</button>
+                    <button onclick="ticketCount('economy', false);" id="case-decrease" class="decrease-btn-color">-</button>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p id="total-price">$ 0</p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right" id="vat">
+                        <p>$0</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right" id="totalPayment">
+                        <p>$0</p>
+                    </div>
+                </div>
+            </div>
+            <button id="book-now" onclick="bookNow()" class="btn-style">Book Now</button>
+        </div>
+    </main>
+    </div>
+
+     <!-- Confirmation Area -->
+     
+    <div align="center" id="confirmation">
+        <h1>Congratulations!!!</h1>
+        <br>
+        <h3>Your ticket purchased</h3>
+        <br>
+        <table class="table-area">
+            <tr>
+                <th class="ticket-name">Ticket Details</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>First - Class :</td>
+                <td><span id="firstClassPrice">0</span> Tickets</td>
+            </tr>
+            <tr>
+                <td>Economy :</td>
+                <td><span id="economyPrice">0</span> Tickets</td>
+            </tr>
+            <tr>
+                <td>Total (With 10% Vat) :</td>
+                <td><span id="totalPrice">0</span></td>
+            </tr>
+        </table>
+        <br>
+        <button id="submit-btn" type="submit" class="submit"><a href=""></a>Submit</button>
+    </div>
+
+    <div id="greeting">
+        <h1>Thanks for your order sir. <span class="color">See you again!🧡</span></h1>
+    </div>
+      
+    <!-- JavaScript Code -->
+    
+     <script src="script.js"></script>
+
+    <!--Thank You-->
+</body>
+
+</html>
